@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chế Thanh Kiên - Fullstack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Lora', 'serif'],
+                        body: ['"Be Vietnam Pro"', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f8fafc',
+                            100: '#eff6ff',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#2563eb',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+        }
+
+        @media print {
+            @page {
+                margin: 10mm 0;
+            }
+
+            body {
+                background: white !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .page {
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                padding-top: 0 !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none !important;
+            }
+        }
+
+        .section-line::after {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 2px;
+            background: #2563eb;
+            margin-top: 4px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border-radius: 3px;
+            padding: 1px 8px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .dot-sep {
+            color: #94a3b8;
+            margin: 0 6px;
+        }
+    </style>
+</head>
+
+<body class="font-body text-navy-900 min-h-screen py-4 sm:py-8 px-2 sm:px-4">
+
+    <!-- Language switcher -->
+    <div class="no-print max-w-3xl mx-auto mb-3 flex justify-end">
+        <a href="../index.html"
+            class="text-xs font-body text-navy-600 border border-navy-300 px-3 py-1 rounded hover:bg-navy-100 transition">←
+            VN</a>
+    </div>
+
+    <div
+        class="page max-w-3xl mx-auto bg-white shadow-[0_2px_24px_rgba(15,23,42,0.08)] border border-navy-100 rounded-sm">
+
+        <!-- Header -->
+        <header class="px-6 sm:px-10 pt-8 sm:pt-10 pb-6 sm:pb-8 border-b border-navy-200">
+            <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-6">
+                <div>
+                    <h1 class="font-heading text-3xl font-bold tracking-tight text-navy-900 leading-tight">
+                        Chế Thanh Kiên
+                    </h1>
+                    <p class="mt-1 font-heading italic text-navy-600 text-base">Fullstack Developer · 2+ years of
+                        experience</p>
+                    <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-navy-700">
+                        <span>11/08/2001</span>
+                        <span class="dot-sep">·</span>
+                        <span>Quang Ngai, Vietnam</span>
+                        <span class="dot-sep">·</span>
+                        <a href="tel:+84395 004 764" class="hover:text-navy-900">(+84) 395 004 764</a>
+                        <span class="dot-sep">·</span>
+
+                    </div>
+                    <div class="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs text-navy-600">
+                        <a href="/cdn-cgi/l/email-protection#85eeede4ecffecebe4e8c5e2e8e4ece9abe6eae8"
+                            class="hover:text-navy-900"><span class="__cf_email__"
+                                data-cfemail="b1dad9d0d8cbd8dfd0dcf1d6dcd0d8dd9fd2dedc">thanhkien2021008@gmail.com</span></a>
+                        <a href="https://github.com/thanhkien2001" target="_blank"
+                            class="hover:text-navy-900 underline underline-offset-2">github.com/thanhkien2001</a>
+                        <span class="dot-sep">·</span>
+                    </div>
+                </div>
+                <div class="shrink-0 flex justify-start sm:justify-end">
+                    <img src="../assets/images/avatar3.png" alt="Chế Thanh Kiên"
+                        class="w-26 sm:w-28 h-auto rounded border border-navy-200 shadow-sm transition-all duration-300 hover:scale-125 relative hover:z-10 hover:shadow-md cursor-zoom-in" />
+                </div>
+            </div>
+        </header>
+
+        <div class="px-6 sm:px-10 py-6 sm:py-8 space-y-6 sm:space-y-8">
+
+            <!-- Giới thiệu -->
+            <section>
+                <h2
+                    class="font-heading text-sm font-semibold uppercase tracking-widest text-navy-500 section-line mb-3">
+                    About Me</h2>
+                <p class="text-sm leading-relaxed text-navy-800">
+                    Fullstack Developer with 2+ years of experience in Web/Mobile App development and RESTful APIs.
+                    Successfully built and maintained large-scale Production systems (Fintech, E-commerce, Blockchain).
+                    Proficient in SDLC, CI/CD, and highly effective in international Agile environments. Passionate
+                    about Clean Architecture, performance optimization, and writing highly maintainable code.
+                </p>
+            </section>
+
+            <!-- Học vấn -->
+            <section>
+                <h2
+                    class="font-heading text-sm font-semibold uppercase tracking-widest text-navy-500 section-line mb-3">
+                    Education &amp; Languages</h2>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                    <div>
+                        <p class="font-semibold text-navy-900 text-sm">Can Tho University (CTU)</p>
+                        <p class="text-xs text-navy-600 italic">Bachelor of Information Technology</p>
+                        <div class="mt-1.5 flex flex-wrap gap-2">
+                            <span class="tag">English B1 (2022)</span>
+                            <span class="tag">TOEIC 600 (5/2023)</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-navy-500 whitespace-nowrap">08/2019 - 06/2024</span>
+                </div>
+            </section>
+
+            <!-- Kỹ năng -->
+            <section>
+                <h2
+                    class="font-heading text-sm font-semibold uppercase tracking-widest text-navy-500 section-line mb-3">
+                    Technical Skills</h2>
+                <div class="space-y-2 text-sm">
+                    <div class="flex gap-2 flex-wrap items-start">
+                        <span class="text-navy-600 font-medium w-24 shrink-0">Frontend</span>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tag">Vue 3</span><span class="tag">React</span><span
+                                class="tag">TailwindCSS</span><span class="tag">SCSS</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap items-start">
+                        <span class="text-navy-600 font-medium w-24 shrink-0">Backend</span>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">NodeJS</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap items-start">
+                        <span class="text-navy-600 font-medium w-24 shrink-0">Database</span>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap items-start">
+                        <span class="text-navy-600 font-medium w-24 shrink-0">DevOps</span>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="tag">Docker</span><span class="tag">Nginx</span><span
+                                class="tag">Cloudflare</span><span class="tag">Linux</span><span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kinh nghiệm -->
+            <section>
+                <h2
+                    class="font-heading text-sm font-semibold uppercase tracking-widest text-navy-500 section-line mb-4">
+                    Work Experience</h2>
+                <div class="space-y-5">
+                    <div class="relative pl-4 border-l-2 border-navy-200">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                            <div>
+                                <p class="font-semibold text-navy-900 text-sm">CÔNG TY TNHH VISUAL WEBER</p>
+                                <p class="text-xs text-navy-600 italic">Fullstack Developer &amp; DevOps Engineer</p>
+                            </div>
+                            <span class="text-xs text-navy-500 whitespace-nowrap">07/2024 - Present · 2+ years</span>
+                        </div>
+                        <ul class="list-disc pl-4 mt-2 text-xs text-navy-800 space-y-1.5">
+                            <li>Designed system architecture, built backend APIs, and developed frontend for enterprise
+                                software products (Fintech, E-commerce, Healthcare).</li>
+                            <li>Worked directly with clients to gather requirements, analyze business logic, and propose
+                                suitable technical solutions for projects.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-4 border-l-2 border-navy-200">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                            <div>
+                                <p class="font-semibold text-navy-900 text-sm">TMA Solutions Binh Dinh</p>
+                                <p class="text-xs text-navy-600 italic">C/C++ &amp; Telecom, Networking Intern</p>
+                            </div>
+                            <span class="text-xs text-navy-500 whitespace-nowrap">06/2023 - 10/2023</span>
+                        </div>
+                        <ul class="list-disc pl-4 mt-2 text-xs text-navy-800 space-y-1.5">
+                            <li>Researched and familiarized with telecommunication network protocols.</li>
+                            <li>Participated in bug fixing and supported the development of software modules in C/C++
+                                under mentorship.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Dự án -->
+            <section>
+                <h2
+                    class="font-heading text-sm font-semibold uppercase tracking-widest text-navy-500 section-line mb-4">
+                    Highlighted Projects</h2>
+                <div class="space-y-5">
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                            <p class="font-semibold text-navy-900 text-sm">Thaco Auto Multi-Brand</p>
+                            <a href="https://thacoautotphcm.vn/" target="_blank"
+                                class="text-xs text-navy-500 underline hover:text-navy-700">thacoautotphcm.vn</a>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mb-1.5">
+                            <span class="tag">PHP</span><span class="tag">Vue
+                                3</span><span class="tag">MySQL</span><span class="tag">Redis</span><span
+                                class="tag">Docker</span><span class="tag">Laravel Tenancy</span>
+                        </div>
+                        <p class="text-xs text-navy-700 leading-relaxed">Developed and maintained an enterprise website
+                            system for THACO AUTO. Implemented a multisite architecture combined with
+                            Laravel Tenancy for synchronized data management across dozens of regional dealerships.
+                            Optimized
+                            performance with Redis cache and fine-tuned database queries, ensuring fast response times
+                            and system stability
+                            under heavy B2B load.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                            <p class="font-semibold text-navy-900 text-sm">PKHL (Hong Linh Hepatobiliary Clinic)</p>
+                            <a href="https://tieuhoaganhonglinh.vn" target="_blank"
+                                class="text-xs text-navy-500 underline hover:text-navy-700">tieuhoaganhonglinh.vn</a>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mb-1.5">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">Elasticsearch</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">RESTful API</span>
+                        </div>
+                        <p class="text-xs text-navy-700 leading-relaxed">Designed and developed a comprehensive
+                            internal management software for the clinic. Digitized and optimized business workflows
+                            including patient records, appointments, billing, inventory, and medical reporting.
+                            Leveraged Elasticsearch to enhance large-scale data retrieval speed and implemented a
+                            strict, multi-role security authorization mechanism.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                            <p class="font-semibold text-navy-900 text-sm">PULLVN CRM</p>
+                            <a href="https://apps.pull.vn" target="_blank"
+                                class="text-xs text-navy-500 underline hover:text-navy-700">apps.pull.vn</a>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mb-1.5">
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">RESTful API</span>
+
+                        </div>
+                        <p class="text-xs text-navy-700 leading-relaxed">Developed a multi-channel CRM platform to
+                            automate lead capture and management from various sources (Facebook, Zalo, TikTok, Google
+                            Ads, WebForms). Deeply integrated APIs with partner CRM/CMS systems, providing centralized
+                            conversation management, detailed role-based access control, and automated customer care
+                            workflows.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                            <p class="font-semibold text-navy-900 text-sm">ONLINE ELEVATOR TRADING PLATFORM</p>
+                            <a href="https://vnliftforum.com/" target="_blank"
+                                class="text-xs text-navy-500 underline hover:text-navy-700">vnliftforum.com</a>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mb-1.5">
+                            <span class="tag">Vue 3</span><span class="tag">Laravel</span><span class="tag">Redis</span>
+                            <span class="tag">MultiVendor</span>
+                        </div>
+                        <p class="text-xs text-navy-700 leading-relaxed">Developed a specialized Multi-Vendor
+                            e-commerce platform for the elevator industry. Provided a system allowing various vendors to
+                            list products, components, and services. Designed a smart automated quoting mechanism,
+                            optimizing the connection and transaction process between businesses and customers.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                            <p class="font-semibold text-navy-900 text-sm">TON Blockchain NFT Game</p>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mb-1.5">
+                            <span class="tag">TON Blockchain</span><span class="tag">Node.js</span><span
+                                class="tag">React</span><span class="tag">Smart Contract</span>
+                        </div>
+                        <p class="text-xs text-navy-700 leading-relaxed">Participated in developing an NFT Game project
+                            on the TON Blockchain. Programmed and integrated Smart Contracts, and built an interactive
+                            user interface (frontend) ensuring a smooth gaming experience and secure Web3 wallet
+                            connections.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="px-6 sm:px-10 py-4 border-t border-navy-100 flex justify-between items-center">
+                <!-- <span class="text-xs text-navy-400 font-body">khaizinam.com</span> -->
+                <a href="../index.html" class="no-print text-xs text-navy-500 hover:text-navy-800 transition">Xem bản
+                    tiếng Việt
+                    →</a>
+            </footer>
+        </div>
+
+        <div class="no-print text-center mt-6">
+            <button onclick="window.print()"
+                class="text-xs font-body text-navy-600 border border-navy-300 px-4 py-1.5 rounded hover:bg-navy-100 transition">Print
+                / Save PDF</button>
+        </div>
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script defer
+            src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+            integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ=="
+            data-cf-beacon='{"version":"2024.11.0","token":"991f16d5aa294aa6a6cf07bb66f736b4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
